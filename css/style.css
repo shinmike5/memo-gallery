@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --mColor:linear-gradient( 
+        89.9deg,  
+        rgba(178,253,238,0.96) -8.1%, 
+        rgba(207,244,254,1) 26.3%, 
+        rgba(207,244,254,0.48) 47.5%, 
+        rgba(254,219,243,0.63) 61.5%, 
+        rgba(254,219,243,1) 78.7%, 
+        rgba(254,207,210,1) 109.2% );
+
+    --mRevColor:linear-gradient( 
+        89.9deg,  
+        rgba(254,207,210,1) -8.1%, 
+        rgba(254,219,243,1) 26.3%, 
+        rgba(254,219,243,0.63) 47.5%, 
+        rgba(207,244,254,0.48) 61.5%, 
+        rgba(207,244,254,1) 78.7%, 
+        rgba(178,253,238,0.96) 109.2% );
+}
+
+body{
+    background-image: var(--mColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Start AuthUI */
+.authBtn{
+    font-size: 1rem;
+    color: #121212;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: var(--mRevColor);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+
+    position: relative;
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+.authBtn:focus{
+    outline: none;
+}
+.authBtn::before{
+    content: '';
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    opacity: 0.9;
+    
+    position: absolute;
+    bottom: -100%;
+    left: -100%;
+    transform: rotate(45deg);
+
+    transition: all 1s;
+}
+.authBtn:hover{
+    transform: scale(0.9);
+}
+.authBtn:hover::before{
+    bottom: 100%;
+    left: 100%;
+}
+
+/* End AuthUI */
