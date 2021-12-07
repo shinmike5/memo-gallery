@@ -39,8 +39,8 @@ body{
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-decoration: none;
     background-image: var(--mRevColor);
-    border: none;
     border-radius: 50px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     padding: 25px;
@@ -50,9 +50,7 @@ body{
 
     overflow: hidden;
 }
-.authBtn:focus{
-    outline: none;
-}
+
 .authBtn::before{
     content: '';
     width: 100%;
